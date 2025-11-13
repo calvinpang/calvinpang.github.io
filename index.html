@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Calvin Pang - SRE Lead | Site Reliability Engineering, DevOps, and Cloud Infrastructure">
+    <meta name="author" content="Calvin Pang">
+    <meta name="keywords" content="SRE, Site Reliability Engineering, DevOps, Cloud Infrastructure, Calvin Pang">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Calvin Pang - SRE Lead">
+    <meta property="og:description" content="Site Reliability Engineering, DevOps, and Cloud Infrastructure">
+    
+    <title>Calvin Pang</title>
+    
+    <!-- Emoji Font Support -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&display=block" rel="stylesheet">
+    <style>
+        /* Force emoji font loading before render */
+        .tagline {
+            font-family: var(--font-mono);
+        }
+        .tagline span {
+            font-family: "Noto Color Emoji", "Apple Color Emoji", "Segoe UI Emoji", sans-serif;
+        }
+        .skill-card h3 {
+            font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", monospace !important;
+        }
+        .project-card h3 {
+            font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", monospace !important;
+        }
+    </style>
+    
+    <link rel="stylesheet" href="styles.css?v=4">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+</head>
+<body>
+    <!-- Header/Navigation -->
+    <header class="header">
+        <nav class="nav">
+            <a href="#home" class="nav-link">home</a>
+            <a href="#about" class="nav-link">about</a>
+            <a href="#experience" class="nav-link">experience</a>
+            <a href="#projects" class="nav-link">projects</a>
+            <a href="#contact" class="nav-link">contact</a>
+            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+                <span class="theme-icon">◐</span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="section hero">
+        <div class="container">
+            <div class="terminal-window">
+                <div class="terminal-header">
+                    <span class="terminal-button"></span>
+                    <span class="terminal-button"></span>
+                    <span class="terminal-button"></span>
+                </div>
+                <div class="terminal-body">
+                    <p class="terminal-line">
+                        <span class="prompt">$</span> whoami
+                    </p>
+                    <h1 class="glitch" data-text="Calvin Pang" style="margin: 0 0 0.5rem 0;">Calvin Pang</h1>
+                    <p class="terminal-line" style="margin-top: 0.5rem;">
+                        <span class="prompt">$</span> cat role.txt
+                    </p>
+                    <p class="subtitle" style="font-size: 1.2rem;">☁️ Senior Director, Cloud Infrastructure</p>
+                    <p class="terminal-line" style="margin-top: 2rem;">
+                        <span class="prompt">$</span> cat mission.txt
+                    </p>
+                    <p class="tagline" style="line-height: 1.8; margin-top: 1rem; font-size: 1.1rem;">
+                        <span style="display: inline-block; width: 2rem; font-family: 'Noto Color Emoji', 'Apple Color Emoji', 'Segoe UI Emoji', sans-serif;">👥</span>Leading high-performing SRE teams<br>
+                        <span style="display: inline-block; width: 2rem; font-family: 'Noto Color Emoji', 'Apple Color Emoji', 'Segoe UI Emoji', sans-serif;">🤖</span>Architecting cloud infrastructure & AI<br>
+                        <span style="display: inline-block; width: 2rem; font-family: 'Noto Color Emoji', 'Apple Color Emoji', 'Segoe UI Emoji', sans-serif;">⚡</span>Automating infrastructure at scale<br>
+                        <span style="display: block; margin-top: 1.5rem; opacity: 0.85; font-size: 0.95rem; color: #3399ff; font-family: var(--font-mono);">25 years of building scalable infrastructure + AI-first automation</span>
+                    <span class="cursor">_</span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="prompt">$</span> cat about.md
+            </h2>
+            <div class="content">
+                <p>
+                    With over 25 years in technology infrastructure, my career has evolved from foundational 
+                    on-premises systems to specialized expertise in cloud services and Site Reliability Engineering. 
+                    I currently lead SRE teams optimizing cloud infrastructure for modern workloads, including 
+                    microservices, containerized applications, and AI/ML services.
+                </p>
+                <p>
+                    My expertise spans AWS, Microsoft Azure, and multi-cloud architectures. I specialize in designing 
+                    resilient systems using Infrastructure as Code, Python-driven automation, and modern DevOps workflows. 
+                    From managing 24x7 global infrastructure to implementing disaster recovery strategies, I leverage 
+                    both traditional SRE practices and emerging technologies to deliver exceptional reliability and performance.
+                </p>
+                <p>
+                    I'm passionate about automation—whether through IaC, Python scripting, or intelligent tooling that 
+                    reduces operational toil. My approach combines deep technical expertise with pragmatic implementation: 
+                    infrastructure optimization, incident response, proactive monitoring, and security-first design. Every 
+                    challenge is an opportunity to build systems that are resilient, scalable, and maintainable.
+                </p>
+                <p>
+                    Beyond technical implementation, I focus on building high-performing teams and fostering collaborative culture. 
+                    With a Master's degree in Information Systems and experience spanning financial services enterprises to fast-growing 
+                    startups, I bring both academic rigor and real-world battle-tested solutions to complex infrastructure challenges.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience/Skills Section -->
+    <section id="experience" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="prompt">$</span> ls -la /skills/
+            </h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>👥 Leadership & Team Building</h3>
+                    <ul>
+                        <li>🌟 Team Leadership & Mentoring</li>
+                        <li>🏢 Stakeholder Management</li>
+                        <li>📋 Cross-Functional Teams</li>
+                        <li>🌍 Global Team Leadership</li>
+                        <li>🎯 Agile & Scrum Methodologies</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h3>🌐 Cloud & Serverless</h3>
+                    <ul>
+                        <li>☁️ AWS (EC2, ECS, EKS, Lambda)</li>
+                        <li>🗄️ Database & Storage (RDS, S3)</li>
+                        <li>🐳 Container Orchestration</li>
+                        <li>🪟 Microsoft Azure & 365</li>
+                        <li>🌐 Multi-Cloud Architecture</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h3>🎯 SRE & Operations</h3>
+                    <ul>
+                        <li>🚀 Site Reliability Engineering</li>
+                        <li>🤝 Incident Response & DR</li>
+                        <li>📈 CloudWatch & Monitoring</li>
+                        <li>🔍 Performance Optimization</li>
+                        <li>📚 Technical Documentation</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h3>🏗️ Infrastructure & Automation</h3>
+                    <ul>
+                        <li>📦 Terraform (Expert)</li>
+                        <li>🤖 Infrastructure as Code</li>
+                        <li>🔄 CI/CD Pipeline Design</li>
+                        <li>⚙️ DevOps & Automation</li>
+                        <li>🖥️ Configuration Management</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h3>🛡️ Security & Networking</h3>
+                    <ul>
+                        <li>🔒 Cloud Security Best Practices</li>
+                        <li>🔐 AWS Security & Compliance</li>
+                        <li>🛡️ Zero Trust Architecture</li>
+                        <li>🌐 VPC Design & Networking</li>
+                        <li>📡 Load Balancing & CDN</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h3>💻 Development & Scripting</h3>
+                    <ul>
+                        <li>🐍 Python (Boto3, Automation)</li>
+                        <li>💻 PowerShell & Bash</li>
+                        <li>🐧 Linux Administration</li>
+                        <li>🔧 Git & Version Control</li>
+                        <li>🐳 Docker & Containerization</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="prompt">$</span> git log --oneline
+            </h2>
+            <div class="projects-list">
+                <article class="project-card">
+                    <h3>☁️ Enterprise Cloud Migration</h3>
+                    <p>
+                        Led comprehensive migration of global infrastructure from on-premises to AWS cloud for 
+                        financial services firm. Architected multi-account AWS landing zone with Terraform automation 
+                        and CI/CD pipelines. Achieved zero downtime migration with significant cost savings and improved 
+                        system reliability to 99.99% uptime.
+                    </p>
+                    <div class="tags">
+                        <span class="tag">aws</span>
+                        <span class="tag">terraform</span>
+                        <span class="tag">migration</span>
+                    </div>
+                </article>
+                
+                <article class="project-card">
+                    <h3>🏗️ IaC Platform</h3>
+                    <p>
+                        Built comprehensive IaC platform using Terraform, enabling teams to provision AWS infrastructure 
+                        through standardized modules. Implemented GitOps workflows with automated validation. 
+                        Reduced infrastructure provisioning time from weeks to hours while ensuring compliance 
+                        standards across thousands of cloud resources.
+                    </p>
+                    <div class="tags">
+                        <span class="tag">terraform</span>
+                        <span class="tag">gitops</span>
+                        <span class="tag">automation</span>
+                    </div>
+                </article>
+                
+                <article class="project-card">
+                    <h3>📈 Observability & Monitoring</h3>
+                    <p>
+                        Designed and deployed enterprise-wide monitoring solution using CloudWatch and Datadog 
+                        across multi-region AWS infrastructure. Implemented Datadog APM for distributed tracing 
+                        and Synthetic Monitoring for proactive uptime checks. Reduced MTTR by 60% and achieved 
+                        proactive incident detection before customer impact.
+                    </p>
+                    <div class="tags">
+                        <span class="tag">cloudwatch</span>
+                        <span class="tag">datadog</span>
+                        <span class="tag">apm</span>
+                    </div>
+                </article>
+                
+                <article class="project-card">
+                    <h3>👥 SRE Team Leadership</h3>
+                    <p>
+                        Leading Site Reliability Engineering teams across multiple cloud platforms and regions. 
+                        Established SRE best practices and implemented Agile workflows. Mentored engineers in 
+                        cloud-native technologies while building high-performing teams focused on AWS optimization 
+                        and infrastructure automation greatly reducing incidents.
+                    </p>
+                    <div class="tags">
+                        <span class="tag">sre</span>
+                        <span class="tag">leadership</span>
+                        <span class="tag">mentorship</span>
+                    </div>
+                </article>
+                
+                <article class="project-card">
+                    <h3>⚡ Hurricane Sandy DR Success</h3>
+                    <p>
+                        Proactively executed disaster recovery plans that kept all critical cloud services 
+                        operational during Hurricane Sandy when main office lost power. Years of planning with 
+                        multi-region AWS architecture and automated failover procedures enabled 100% uptime for 
+                        mission-critical systems during this unprecedented crisis.
+                    </p>
+                    <div class="tags">
+                        <span class="tag">aws</span>
+                        <span class="tag">dr</span>
+                        <span class="tag">uptime</span>
+                    </div>
+                </article>
+                
+                <article class="project-card">
+                    <h3>🔒 Cloud Security & Compliance</h3>
+                    <p>
+                        Architected enterprise-wide AWS security framework implementing IAM best practices with 
+                        Principle of Least Privilege (PoLP) and zero-trust networking principles. Established 
+                        threat detection and incident response procedures with automated monitoring ensuring 
+                        proactive security posture across multi-region infrastructure.
+                    </p>
+                    <div class="tags">
+                        <span class="tag">security</span>
+                        <span class="tag">compliance</span>
+                        <span class="tag">iam</span>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="prompt">$</span> echo $CONTACT
+            </h2>
+            <div class="contact-content">
+                <p class="contact-intro">
+                    I'm always eager to connect with fellow engineers to discuss SRE best practices, 
+                    explore cloud architecture challenges, and share insights on building reliable systems. 
+                    Whether you're looking to discuss reliability engineering, need consulting guidance, 
+                    or want to chat about the latest in DevOps and infrastructure—I'd love to hear from you.
+                </p>
+                <p class="contact-intro" style="margin-top: 1.5rem; font-size: 0.95rem; color: var(--text-secondary);">
+                    <strong>Open to:</strong> Advisory roles • Mentorship opportunities
+                </p>
+                <div class="social-links">
+                    <a href="https://linkedin.com/in/calvinpang" class="social-link" target="_blank" rel="noopener noreferrer" style="font-size: 1.1rem; font-weight: 600;">
+                        <span class="link-icon" style="font-family: 'Apple Color Emoji', 'Segoe UI Emoji', 'Noto Color Emoji', sans-serif;">👔</span> linkedin.com/in/calvinpang
+                    </a>
+                    <a href="https://github.com/calvinpang" class="social-link" target="_blank" rel="noopener noreferrer">
+                        <span class="link-icon">💻</span> github.com/calvinpang
+                    </a>
+                    <a href="https://x.com/calvinpang" class="social-link" target="_blank" rel="noopener noreferrer">
+                        <span class="link-icon">✖️</span> x.com/calvinpang
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>
+                <span class="prompt">$</span> uptime -s
+                <span class="footer-year">2025</span>
+            </p>
+            <p class="footer-note">
+                Built with ♥ and zero dependencies • 
+                <a href="https://github.com/calvinpang/calvinpang.github.io" target="_blank" rel="noopener noreferrer">view source</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
