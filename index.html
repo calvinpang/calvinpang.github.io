@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Calvin Pang - SRE Lead | Site Reliability Engineering, DevOps, and Cloud Infrastructure">
+    <meta name="author" content="Calvin Pang">
+    <meta name="keywords" content="SRE, Site Reliability Engineering, DevOps, Cloud Infrastructure, Calvin Pang">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Calvin Pang - SRE Lead">
+    <meta property="og:description" content="Site Reliability Engineering, DevOps, and Cloud Infrastructure">
+    
+    <title>Calvin Pang | Cloud Infrastructure Leader</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css?v=9">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+</head>
+<body>
+    <!-- Header/Navigation -->
+    <header class="header glass">
+        <nav class="nav">
+            <a href="#home" class="logo">
+                <img src="assets/logo.png" alt="CP" class="logo-mark-img">
+            </a>
+            <div class="nav-links">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+                <i class="ri-moon-line theme-icon"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="section hero">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <div class="badge">Senior Director, Cloud Infrastructure</div>
+                <h1 class="hero-title">Building Resilient <br><span class="gradient-text">Cloud Systems</span></h1>
+                <p class="hero-subtitle">
+                    I lead high-performing SRE teams to architect scalable, secure, and automated infrastructure for the AI era.
+                </p>
+                <div class="hero-cta">
+                    <a href="#contact" class="btn btn-primary">Get in Touch</a>
+                    <a href="#projects" class="btn btn-secondary">View Work</a>
+                </div>
+            </div>
+            
+            <div class="hero-visual">
+                <div class="terminal-window glass-panel">
+                    <div class="terminal-header">
+                        <div class="terminal-controls">
+                            <span class="control close"></span>
+                            <span class="control minimize"></span>
+                            <span class="control maximize"></span>
+                        </div>
+                        <div class="terminal-title">calvin@cloud:~/portfolio</div>
+                    </div>
+                    <div class="terminal-body">
+                        <div class="code-line">
+                            <span class="prompt">➜</span> <span class="cmd">whoami</span>
+                        </div>
+                        <div class="output">Calvin Pang</div>
+                        
+                        <div class="code-line">
+                            <span class="prompt">➜</span> <span class="cmd">cat current_role.json</span>
+                        </div>
+                        <div class="output json-output">
+{
+  "role": "Senior Director",
+  "focus": ["SRE", "Cloud Architecture", "AI/ML Ops"],
+  "experience": "25+ Years",
+  "mission": "Automate everything"
+}
+                        </div>
+                        
+                        <div class="code-line">
+                            <span class="prompt">➜</span> <span class="cursor">_</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+                <div class="section-line"></div>
+            </div>
+            
+            <div class="about-grid">
+                <div class="about-content">
+                    <p class="lead-text">
+                        With over 25 years in technology infrastructure, I've evolved from foundational on-premises systems to leading SRE for global cloud operations.
+                    </p>
+                    <p>
+                        I currently lead SRE teams optimizing cloud infrastructure for modern workloads, including microservices, containerized applications, and AI/ML services. My expertise spans AWS, Microsoft Azure, and multi-cloud architectures.
+                    </p>
+                    <p>
+                        I specialize in designing resilient systems using Infrastructure as Code, Python-driven automation, and modern DevOps workflows. From managing 24x7 global infrastructure to implementing disaster recovery strategies, I leverage both traditional SRE practices and emerging technologies.
+                    </p>
+                    <div class="stats-row">
+                        <div class="stat-item">
+                            <span class="stat-number">25+</span>
+                            <span class="stat-label">Years Exp</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">100%</span>
+                            <span class="stat-label">Uptime Record</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">Global</span>
+                            <span class="stat-label">Team Leadership</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual">
+                    <div class="code-block glass-panel">
+<pre><code><span class="keyword">class</span> <span class="class-name">EngineeringLeader</span>:
+    <span class="keyword">def</span> <span class="function">__init__</span>(<span class="self">self</span>):
+        <span class="self">self</span>.focus = <span class="string">"Reliability"</span>
+        <span class="self">self</span>.passion = <span class="string">"Automation"</span>
+        
+    <span class="keyword">def</span> <span class="function">lead_teams</span>(<span class="self">self</span>):
+        <span class="return">return</span> <span class="string">"High Performance"</span>
+        
+    <span class="keyword">def</span> <span class="function">solve_problems</span>(<span class="self">self</span>):
+        <span class="comment"># Scalable solutions only</span>
+        <span class="return">return</span> <span class="boolean">True</span></code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience/Skills Section -->
+    <section id="experience" class="section section-alt">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Technical Arsenal</h2>
+                <div class="section-line"></div>
+            </div>
+            
+            <div class="skills-grid">
+                <div class="skill-card glass-panel">
+                    <div class="skill-header">
+                        <div class="skill-icon"><i class="ri-team-line"></i></div>
+                        <h3>Leadership</h3>
+                    </div>
+                    <ul>
+                        <li>Team Leadership & Mentoring</li>
+                        <li>Stakeholder Management</li>
+                        <li>Cross-Functional Teams</li>
+                        <li>Global Team Leadership</li>
+                        <li>Agile & Scrum Methodologies</li>
+                    </ul>
+                </div>
+                <div class="skill-card glass-panel">
+                    <div class="skill-header">
+                        <div class="skill-icon"><i class="ri-cloud-line"></i></div>
+                        <h3>Cloud & Serverless</h3>
+                    </div>
+                    <ul>
+                        <li>AWS (EC2, ECS, EKS, Lambda)</li>
+                        <li>Database & Storage (RDS, S3)</li>
+                        <li>Container Orchestration</li>
+                        <li>Microsoft Azure & 365</li>
+                        <li>Multi-Cloud Architecture</li>
+                    </ul>
+                </div>
+                <div class="skill-card glass-panel">
+                    <div class="skill-header">
+                        <div class="skill-icon"><i class="ri-pulse-line"></i></div>
+                        <h3>SRE & Operations</h3>
+                    </div>
+                    <ul>
+                        <li>Site Reliability Engineering</li>
+                        <li>Incident Response & DR</li>
+                        <li>CloudWatch & Monitoring</li>
+                        <li>Performance Optimization</li>
+                        <li>Technical Documentation</li>
+                    </ul>
+                </div>
+                <div class="skill-card glass-panel">
+                    <div class="skill-header">
+                        <div class="skill-icon"><i class="ri-building-2-line"></i></div>
+                        <h3>Infrastructure</h3>
+                    </div>
+                    <ul>
+                        <li>Terraform (Expert)</li>
+                        <li>Infrastructure as Code</li>
+                        <li>CI/CD Pipeline Design</li>
+                        <li>DevOps & Automation</li>
+                        <li>Configuration Management</li>
+                    </ul>
+                </div>
+                <div class="skill-card glass-panel">
+                    <div class="skill-header">
+                        <div class="skill-icon"><i class="ri-shield-check-line"></i></div>
+                        <h3>Security</h3>
+                    </div>
+                    <ul>
+                        <li>Cloud Security Best Practices</li>
+                        <li>AWS Security & Compliance</li>
+                        <li>Zero Trust Architecture</li>
+                        <li>VPC Design & Networking</li>
+                        <li>Load Balancing & CDN</li>
+                    </ul>
+                </div>
+                <div class="skill-card glass-panel">
+                    <div class="skill-header">
+                        <div class="skill-icon"><i class="ri-code-s-slash-line"></i></div>
+                        <h3>Development</h3>
+                    </div>
+                    <ul>
+                        <li>Python (Boto3, Automation)</li>
+                        <li>PowerShell & Bash</li>
+                        <li>Linux Administration</li>
+                        <li>Git & Version Control</li>
+                        <li>Docker & Containerization</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Key Achievements</h2>
+                <div class="section-line"></div>
+            </div>
+            
+            <div class="projects-list">
+                <article class="project-card glass-panel">
+                    <div class="project-header">
+                        <h3>SRE Team Leadership</h3>
+                        <span class="project-icon"><i class="ri-team-line"></i></span>
+                    </div>
+                    <p>
+                        Directing global Site Reliability Engineering teams across multi-cloud environments. Established core SRE best practices, implemented Agile workflows, and fostered a culture of reliability. Mentored senior engineers in cloud-native technologies to build high-performing, autonomous squads.
+                    </p>
+                    <div class="project-metrics">
+                        <div class="metric">
+                            <span class="metric-val">Global</span>
+                            <span class="metric-label">Scale</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-val">High</span>
+                            <span class="metric-label">Impact</span>
+                        </div>
+                    </div>
+                    <div class="tags">
+                        <span class="tag">SRE</span>
+                        <span class="tag">Leadership</span>
+                        <span class="tag">Mentorship</span>
+                    </div>
+                </article>
+
+                <article class="project-card glass-panel">
+                    <div class="project-header">
+                        <h3>Enterprise Cloud Migration</h3>
+                        <span class="project-icon"><i class="ri-cloud-windy-line"></i></span>
+                    </div>
+                    <p>
+                        Spearheaded a comprehensive migration of global legacy infrastructure to AWS for a major financial services firm. Architected a secure, multi-account Landing Zone using Terraform and CI/CD, achieving zero-downtime cutovers and modernizing the entire technology stack.
+                    </p>
+                    <div class="project-metrics">
+                        <div class="metric">
+                            <span class="metric-val">99.99%</span>
+                            <span class="metric-label">Uptime</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-val">Zero</span>
+                            <span class="metric-label">Downtime</span>
+                        </div>
+                    </div>
+                    <div class="tags">
+                        <span class="tag">AWS</span>
+                        <span class="tag">Terraform</span>
+                        <span class="tag">Migration</span>
+                    </div>
+                </article>
+
+                <article class="project-card glass-panel">
+                    <div class="project-header">
+                        <h3>Disaster Recovery Leadership</h3>
+                        <span class="project-icon"><i class="ri-thunderstorms-line"></i></span>
+                    </div>
+                    <p>
+                        Orchestrated mission-critical disaster recovery strategies that ensured 100% uptime during major crises, including Hurricane Sandy. Designed multi-region AWS architectures with automated failover, proving the value of proactive resilience engineering and robust business continuity planning.
+                    </p>
+                    <div class="project-metrics">
+                        <div class="metric">
+                            <span class="metric-val">100%</span>
+                            <span class="metric-label">Uptime</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-val">Multi</span>
+                            <span class="metric-label">Region</span>
+                        </div>
+                    </div>
+                    <div class="tags">
+                        <span class="tag">AWS</span>
+                        <span class="tag">DR</span>
+                        <span class="tag">Resilience</span>
+                    </div>
+                </article>
+
+                <article class="project-card glass-panel">
+                    <div class="project-header">
+                        <h3>IaC Platform Engineering</h3>
+                        <span class="project-icon"><i class="ri-server-line"></i></span>
+                    </div>
+                    <p>
+                        Engineered a self-service Infrastructure as Code platform using Terraform and GitOps. Enabled development teams to provision standardized, compliant AWS resources in minutes rather than weeks, enforcing policy-as-code and drastically increasing deployment velocity.
+                    </p>
+                    <div class="project-metrics">
+                        <div class="metric">
+                            <span class="metric-val">100x</span>
+                            <span class="metric-label">Faster</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-val">1000+</span>
+                            <span class="metric-label">Resources</span>
+                        </div>
+                    </div>
+                    <div class="tags">
+                        <span class="tag">Terraform</span>
+                        <span class="tag">GitOps</span>
+                        <span class="tag">Automation</span>
+                    </div>
+                </article>
+
+                <article class="project-card glass-panel">
+                    <div class="project-header">
+                        <h3>Security & Compliance</h3>
+                        <span class="project-icon"><i class="ri-shield-check-line"></i></span>
+                    </div>
+                    <p>
+                        Architected an enterprise-grade security framework implementing Zero Trust principles and IAM best practices. Established automated threat detection and incident response pipelines, ensuring continuous compliance with rigorous financial industry standards across global infrastructure.
+                    </p>
+                    <div class="project-metrics">
+                        <div class="metric">
+                            <span class="metric-val">100%</span>
+                            <span class="metric-label">Compliant</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-val">Zero</span>
+                            <span class="metric-label">Trust</span>
+                        </div>
+                    </div>
+                    <div class="tags">
+                        <span class="tag">Security</span>
+                        <span class="tag">Compliance</span>
+                        <span class="tag">IAM</span>
+                    </div>
+                </article>
+
+                <article class="project-card glass-panel">
+                    <div class="project-header">
+                        <h3>Observability Ecosystem</h3>
+                        <span class="project-icon"><i class="ri-bar-chart-box-line"></i></span>
+                    </div>
+                    <p>
+                        Designed a holistic observability ecosystem using Datadog and CloudWatch across multi-region environments. Implemented distributed tracing and synthetic monitoring to reduce MTTR by 60%, shifting the operational focus from reactive troubleshooting to proactive performance optimization.
+                    </p>
+                    <div class="project-metrics">
+                        <div class="metric">
+                            <span class="metric-val">-60%</span>
+                            <span class="metric-label">MTTR</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-val">Proactive</span>
+                            <span class="metric-label">Ops</span>
+                        </div>
+                    </div>
+                    <div class="tags">
+                        <span class="tag">CloudWatch</span>
+                        <span class="tag">Datadog</span>
+                        <span class="tag">APM</span>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section section-alt">
+        <div class="container">
+            <div class="contact-wrapper glass-panel">
+                <div class="contact-content">
+                    <h2 class="section-title">Let's Connect</h2>
+                    <p class="contact-intro">
+                        I'm always eager to connect with fellow engineers to discuss SRE best practices, 
+                        explore cloud architecture challenges, and share insights on building reliable systems.
+                    </p>
+                    <div class="open-to">
+                        <strong>Open to:</strong> Advisory roles • Mentorship opportunities
+                    </div>
+                    <div class="social-links">
+                        <a href="https://linkedin.com/in/calvinpang" class="social-link" target="_blank" rel="noopener noreferrer">
+                            <span class="link-icon"><i class="ri-linkedin-fill"></i></span> LinkedIn
+                        </a>
+                        <a href="https://github.com/calvinpang" class="social-link" target="_blank" rel="noopener noreferrer">
+                            <span class="link-icon"><i class="ri-github-fill"></i></span> GitHub
+                        </a>
+                        <a href="https://x.com/calvinpang" class="social-link" target="_blank" rel="noopener noreferrer">
+                            <span class="link-icon"><i class="ri-twitter-x-fill"></i></span> X (Twitter)
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
