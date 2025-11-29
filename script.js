@@ -123,30 +123,32 @@ function initAnimations() {
 function initNavMenu() {
     const hamburger = document.getElementById('hamburger');
     const navMenu = document.getElementById('nav-menu');
-    const navOverlay = document.getElementById('nav-overlay');
     const navLinks = document.querySelectorAll('.nav-link');
     
     function toggleMenu() {
         const isExpanded = hamburger.getAttribute('aria-expanded') === 'true';
         hamburger.setAttribute('aria-expanded', !isExpanded);
         navMenu.classList.toggle('active');
-        navOverlay.classList.toggle('active');
-        // No longer preventing scrolling for dropdown
     }
     
     function closeMenuFunc() {
         hamburger.setAttribute('aria-expanded', 'false');
         navMenu.classList.remove('active');
-        navOverlay.classList.remove('active');
     }
     
     if (hamburger) {
-        hamburger.addEventListener('click', toggleMenu);
+        hamburger.addEventListener('click', (e) => {
+            e.stopPropagation();
+            toggleMenu();
+        });
     }
     
-    if (navOverlay) {
-        navOverlay.addEventListener('click', closeMenuFunc);
-    }
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (navMenu.classList.contains('active') && !navMenu.contains(e.target)) {
+            closeMenuFunc();
+        }
+    });
     
     // Close menu when clicking a link
     navLinks.forEach(link => {

@@ -308,6 +308,7 @@ a:hover {
     display: flex;
     flex-direction: column;
     gap: 0.25rem;
+    align-items: flex-end;
 }
 
 .nav-link {
@@ -330,21 +331,7 @@ a:hover {
     display: none;
 }
 
-/* Overlay (Transparent for clicking outside) */
-.nav-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: transparent;
-    z-index: 1001;
-    display: none;
-}
 
-.nav-overlay.active {
-    display: block;
-}
 
 /* ========================================
    Hero Section
