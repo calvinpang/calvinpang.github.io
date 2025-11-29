@@ -94,10 +94,13 @@ const observerOptions = {
 };
 
 const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
+    entries.forEach((entry, index) => {
         if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
+            // Stagger animations based on index in the current batch
+            setTimeout(() => {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }, index * 100);
             observer.unobserve(entry.target);
         }
     });
@@ -106,11 +109,55 @@ const observer = new IntersectionObserver((entries) => {
 function initAnimations() {
     const elements = document.querySelectorAll('.glass-panel, .section-title, .hero-content > *');
     
-    elements.forEach((el, index) => {
+    elements.forEach((el) => {
         el.style.opacity = '0';
         el.style.transform = 'translateY(20px)';
-        el.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
+        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
         observer.observe(el);
+    });
+}
+
+// ========================================
+// Navigation Menu
+// ========================================
+function initNavMenu() {
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
+    const navOverlay = document.getElementById('nav-overlay');
+    const navLinks = document.querySelectorAll('.nav-link');
+    
+    function toggleMenu() {
+        const isExpanded = hamburger.getAttribute('aria-expanded') === 'true';
+        hamburger.setAttribute('aria-expanded', !isExpanded);
+        navMenu.classList.toggle('active');
+        navOverlay.classList.toggle('active');
+        // No longer preventing scrolling for dropdown
+    }
+    
+    function closeMenuFunc() {
+        hamburger.setAttribute('aria-expanded', 'false');
+        navMenu.classList.remove('active');
+        navOverlay.classList.remove('active');
+    }
+    
+    if (hamburger) {
+        hamburger.addEventListener('click', toggleMenu);
+    }
+    
+    if (navOverlay) {
+        navOverlay.addEventListener('click', closeMenuFunc);
+    }
+    
+    // Close menu when clicking a link
+    navLinks.forEach(link => {
+        link.addEventListener('click', closeMenuFunc);
+    });
+    
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && navMenu.classList.contains('active')) {
+            closeMenuFunc();
+        }
     });
 }
 
@@ -139,6 +186,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initTheme();
     initTerminal();
     initAnimations();
+    initNavMenu();
     initSmoothScroll();
     
     console.log('%c Designed & Built by Calvin Pang ', 'background: #2563eb; color: white; padding: 4px; border-radius: 4px;');

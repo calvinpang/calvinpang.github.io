@@ -2,10 +2,10 @@
    CSS Variables & Theme
    ======================================== */
 :root {
-    /* Light theme (default) */
-    --bg-primary: #ffffff;
-    --bg-secondary: #f8fafc;
-    --bg-accent: #f1f5f9;
+    /* Light theme (Beige) */
+    --bg-primary: #fdfbf7;
+    --bg-secondary: #f5f2eb;
+    --bg-accent: #e6e2d8;
     --text-primary: #0f172a;
     --text-secondary: #475569;
     --text-tertiary: #94a3b8;
@@ -14,12 +14,12 @@
     --accent-secondary: #0ea5e9;
     --accent-glow: rgba(37, 99, 235, 0.2);
     
-    --glass-bg: rgba(255, 255, 255, 0.7);
+    --glass-bg: rgba(253, 251, 247, 0.7);
     --glass-border: rgba(255, 255, 255, 0.5);
-    --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+    --glass-shadow: 0 8px 32px 0 rgba(44, 40, 36, 0.05);
     
     --card-bg: #ffffff;
-    --card-border: #e2e8f0;
+    --card-border: #e6e2d8;
     
     --terminal-bg: #1e293b;
     --terminal-header: #0f172a;
@@ -184,6 +184,9 @@ a:hover {
 /* ========================================
    Header & Navigation
    ======================================== */
+/* ========================================
+   Header & Navigation
+   ======================================== */
 .header {
     position: fixed;
     top: 0;
@@ -191,7 +194,7 @@ a:hover {
     right: 0;
     z-index: 1000;
     transition: all var(--transition-normal);
-    padding: 1rem 0;
+    padding: 0.5rem 0;
 }
 
 .nav {
@@ -201,17 +204,19 @@ a:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 
 .logo {
     display: flex;
     align-items: center;
     text-decoration: none;
+    z-index: 1002;
 }
 
 .logo-mark-img {
-    width: 42px;
-    height: 42px;
+    width: 36px;
+    height: 36px;
     border-radius: 10px;
     box-shadow: 0 4px 12px var(--accent-glow);
     transition: all var(--transition-normal);
@@ -223,38 +228,30 @@ a:hover {
     box-shadow: 0 8px 20px var(--accent-glow);
 }
 
-
-
-.nav-links {
+.nav-controls {
     display: flex;
-    gap: 2rem;
     align-items: center;
+    gap: 1rem;
+    z-index: 1002;
 }
 
-.nav-link {
-    color: var(--text-secondary);
-    font-weight: 500;
-    font-size: 0.95rem;
-    position: relative;
-}
-
-.nav-link:hover, .nav-link.active {
+.hamburger {
+    background: none;
+    border: none;
     color: var(--text-primary);
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 50%;
+    transition: background-color var(--transition-fast);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.nav-link::after {
-    content: '';
-    position: absolute;
-    bottom: -4px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: var(--accent-primary);
-    transition: width var(--transition-fast);
-}
-
-.nav-link:hover::after, .nav-link.active::after {
-    width: 100%;
+.hamburger:hover {
+    background-color: var(--bg-accent);
+    color: var(--accent-primary);
 }
 
 .theme-toggle {
@@ -266,10 +263,87 @@ a:hover {
     padding: 0.5rem;
     border-radius: 50%;
     transition: background-color var(--transition-fast);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .theme-toggle:hover {
     background-color: var(--bg-accent);
+    color: var(--accent-primary);
+}
+
+/* Navigation Dropdown */
+.nav-menu {
+    position: absolute;
+    top: 100%;
+    right: var(--spacing-md);
+    width: 220px;
+    height: auto;
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    z-index: 1003;
+    
+    /* Animation: Fade & Scale */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px) scale(0.95);
+    transform-origin: top right;
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+}
+
+.nav-menu.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(10px) scale(1);
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.nav-link {
+    color: var(--text-secondary);
+    font-weight: 500;
+    font-size: 0.95rem;
+    position: relative;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    transition: all var(--transition-fast);
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--text-primary);
+    background-color: var(--bg-accent);
+    transform: none;
+}
+
+.nav-link::after {
+    display: none;
+}
+
+/* Overlay (Transparent for clicking outside) */
+.nav-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    z-index: 1001;
+    display: none;
+}
+
+.nav-overlay.active {
+    display: block;
 }
 
 /* ========================================
@@ -279,7 +353,7 @@ a:hover {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    padding-top: 80px;
+    padding-top: 60px;
 }
 
 .hero-container {
@@ -807,9 +881,7 @@ a:hover {
         padding: 0 var(--spacing-sm);
     }
     
-    .nav-links {
-        display: none; /* Mobile menu would go here */
-    }
+    /* .nav-links removed to allow drawer menu to work on mobile */
     
     .hero {
         padding-top: 100px;

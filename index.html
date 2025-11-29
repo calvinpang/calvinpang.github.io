@@ -12,7 +12,7 @@
     <meta property="og:title" content="Calvin Pang - SRE Lead">
     <meta property="og:description" content="Site Reliability Engineering, DevOps, and Cloud Infrastructure">
     
-    <title>Calvin Pang | Cloud Infrastructure Leader</title>
+    <title>Calvin Pang</title>
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -49,16 +49,26 @@
             <a href="#home" class="logo">
                 <img src="assets/logo.png" alt="CP" class="logo-mark-img">
             </a>
-            <div class="nav-links">
-                <a href="#home" class="nav-link">Home</a>
-                <a href="#about" class="nav-link">About</a>
-                <a href="#experience" class="nav-link">Experience</a>
-                <a href="#projects" class="nav-link">Projects</a>
-                <a href="#contact" class="nav-link">Contact</a>
+            
+            <div class="nav-controls">
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+                    <i class="ri-moon-line theme-icon"></i>
+                </button>
+                <button id="hamburger" class="hamburger" aria-label="Toggle navigation">
+                    <i class="ri-menu-4-line"></i>
+                </button>
             </div>
-            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
-                <i class="ri-moon-line theme-icon"></i>
-            </button>
+
+            <div id="nav-menu" class="nav-menu">
+                <div class="nav-links">
+                    <a href="#home" class="nav-link">Home</a>
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#experience" class="nav-link">Experience</a>
+                    <a href="#projects" class="nav-link">Projects</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                </div>
+            </div>
+            <div id="nav-overlay" class="nav-overlay"></div>
         </nav>
     </header>
 
